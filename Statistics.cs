@@ -4,7 +4,7 @@ namespace Algorithms
 {
     public static class Statistics
     {
-        public static T Mode<T>(IEnumerable<T> selection)
+        public static T Mode<T>(this IEnumerable<T> selection)
         {
             var occurrences = new Dictionary<T, int>();
             foreach (T item in selection)
