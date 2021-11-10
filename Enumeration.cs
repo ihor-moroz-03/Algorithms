@@ -8,7 +8,7 @@ namespace Algorithms
 {
     public static class Enumeration
     {
-        public static string CycleNext(this IEnumerator<string> enumerator)
+        public static T CycleNext<T>(this IEnumerator<T> enumerator)
         {
             if (enumerator.MoveNext()) return enumerator.Current;
             enumerator.Reset();
