@@ -18,7 +18,7 @@ namespace Algorithms
                         flag = true;
                     }
                 }
-                if (flag == false) break;
+                if (!flag) break;
             }
         }
 
@@ -112,27 +112,6 @@ namespace Algorithms
 
             QuickRec(arr, first, partIndex - 1, compare);
             QuickRec(arr, partIndex + 1, last, compare);
-
-            //T pivot = arr[(first + last) / 2];
-            //int left = first, right = last;
-
-            //while (true)
-            //{
-            //    while (compare(arr[left], pivot) < 0)
-            //        left++;
-
-            //    while (compare(arr[right], pivot) > 0)
-            //        right--;
-
-            //    if (left == right) break;
-            //    if (compare(arr[left], arr[right]) == 0)
-            //        left++;
-            //    else
-            //        Swap(ref arr[left], ref arr[right]);
-            //}
-
-            //QuickRec(arr, first, right - 1, compare);
-            //QuickRec(arr, right + 1, last, compare);
         }
 
         static void MergeTwo<T>(T[] arr, int start, int m, int end, Comparison<T> compare)
